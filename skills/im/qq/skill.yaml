@@ -1,0 +1,90 @@
+name: qq
+version: 0.1.0
+description: QQ 接入：通过 NapCat（OneBot v11 正向 WebSocket）在 QQ 群聊/私聊里接话。使用通用大脑核心与独立 QQ 记忆命名空间，默认拥有独立 QQ 身份（超管可用 /bind 手动绑定外部身份）。群聊默认静音，被 @ 或引用后进入唤醒窗口；私聊全响应；超管命令沉默拒绝非超管。能看懂发来的图片（视觉模型转一句话再进大脑）；表情只发动图，本地库先找、库里没有才线上搜，对方甩表情时必回一张。
+category: im
+entry: main.py
+tools:
+- id: qq_start
+  description: 启动 QQ 接入，连接 NapCat 的 OneBot v11 正向 WebSocket，开始在白名单内的 QQ 群聊/私聊里接话。用户说上QQ、接QQ消息、开群聊、启动QQ时调用。
+  keywords:
+  - qq
+  - QQ
+  - 群聊
+  - 上qq
+  - 接qq
+  - 接qq消息
+  - 开群聊
+  - 启动qq
+  - qq机器人
+  - napcat
+  parameters:
+    type: object
+    properties: {}
+    required: []
+- id: qq_stop
+  description: 停止 QQ 接入，断开 NapCat 连接。用户说下QQ、停掉群聊、别接QQ消息时调用。
+  keywords:
+  - 下qq
+  - 停qq
+  - 停止qq
+  - 关qq
+  - 停掉群聊
+  - 关闭群聊
+  - 别接qq
+  - 停止接qq消息
+  - qq下线
+  parameters:
+    type: object
+    properties: {}
+    required: []
+- id: qq_status
+  description: 查看 QQ 接入状态：WebSocket 连接状态、收到和处理消息计数、唤醒窗口、最近回复和最近错误。用户问QQ状态、群聊在不在接、接了多少条时调用。
+  keywords:
+  - qq状态
+  - qq怎么样
+  - 群聊状态
+  - qq在跑吗
+  - 还在接qq吗
+  - 接了多少qq消息
+  - qq连接
+  parameters:
+    type: object
+    properties: {}
+    required: []
+- id: qq_bind
+  description: 超管手动把一个 QQ 号绑定/解绑到指定外部身份，实现跨平台记忆打通。也用来查看当前绑定表。用户说绑定QQ、QQ绑定观众、解绑QQ、看QQ绑定表时调用。
+  keywords:
+  - 绑定qq
+  - qq绑定
+  - 绑定观众
+  - 解绑qq
+  - qq解绑
+  - 绑定表
+  - qq绑定表
+  - 记忆打通
+  parameters:
+    type: object
+    properties:
+      qq_id:
+        type: string
+        description: 要绑定的 QQ 号。
+      anchor:
+        type: string
+        description: 抖音观众 ID（profiles 文件名）。留空表示查看该 QQ 当前绑定；填 unbind 表示解绑。
+    required: []
+- id: qq_sticker_sync
+  description: 把这个 QQ 号自己收藏的表情同步进表情包库（stickers/），之后群里按关键词就能配表情。用户说同步表情、导入收藏表情、表情包没图、更新表情包时调用。
+  keywords:
+  - 同步表情
+  - 导入表情
+  - 收藏表情
+  - 表情包库
+  - 更新表情包
+  - 表情没图
+  parameters:
+    type: object
+    properties:
+      limit:
+        type: string
+        description: 最多同步多少个收藏表情，默认 60。
+    required: []

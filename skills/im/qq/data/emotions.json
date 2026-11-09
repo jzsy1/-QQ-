@@ -1,0 +1,11 @@
+{
+  "qq_12345": {
+    "valence": 0.15,
+    "arousal": 0.45,
+    "affection": 0.5,
+    "anger": 0.0,
+    "consecutive_scolds": 0,
+    "dominant_mood": "neutral",
+    "last_update": 1794216817.2381604
+  }
+}

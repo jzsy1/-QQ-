@@ -1,0 +1,2909 @@
+{
+ "no_param": [
+  "autostart_status",
+  "check_updates",
+  "clean_memory",
+  "clean_ram",
+  "close_video",
+  "elevate_self",
+  "empty_recycle_bin",
+  "get_bluetooth_status",
+  "get_current_time",
+  "get_cursor_pos",
+  "get_firewall_status",
+  "get_hardware_info",
+  "get_network_info",
+  "get_persona",
+  "get_power_timeouts",
+  "get_privilege_status",
+  "get_system_stats",
+  "get_system_status",
+  "get_temp_threshold",
+  "get_temperatures",
+  "get_update_history",
+  "get_wallpaper",
+  "list_app_volumes",
+  "list_firewall_rules",
+  "list_kekesi_files",
+  "list_monitors",
+  "list_ocr_languages",
+  "list_personas",
+  "list_power_plans",
+  "list_tasks",
+  "list_watch_rules",
+  "list_wifi_networks",
+  "list_wifi_profiles",
+  "list_workflows",
+  "qqmusic_status",
+  "read_clipboard",
+  "read_screen",
+  "repair_system",
+  "show_desktop",
+  "uninstall_autostart",
+  "video_status"
+ ],
+ "with_param": [
+  {
+   "tool": "search_tools",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "open_app",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "force_new",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wechat_send_message",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "contact",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "message",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wechat_read_messages",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "scope",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "unread",
+      "current",
+      "contact"
+     ]
+    },
+    {
+     "name": "contact",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "max_chats",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wechat_reply_current",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "message",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "open_app_and_type",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "press_enter",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "search_web",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "fetch_web_page",
+   "params": [
+    {
+     "name": "url",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "start_index",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "max_length",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "web_search",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "self_study",
+   "params": [
+    {
+     "name": "topics",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "type_text",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "search_files",
+   "params": [
+    {
+     "name": "keyword",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "search_dir",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "create_document",
+   "params": [
+    {
+     "name": "content",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "filename",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "folder",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "format",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "docx",
+      "txt",
+      "md"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "run_shell",
+   "params": [
+    {
+     "name": "command",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "shell",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "powershell",
+      "cmd"
+     ]
+    },
+    {
+     "name": "admin",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "remember_app",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "command",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "remember_fact",
+   "params": [
+    {
+     "name": "key",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "value",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "search_memory",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "cleanup_memory",
+   "params": [
+    {
+     "name": "digest_keep",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "task_keep",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "prune_stale_prefs",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "open_url",
+   "params": [
+    {
+     "name": "url",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "get_weather",
+   "params": [
+    {
+     "name": "city",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_volume",
+   "params": [
+    {
+     "name": "level",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_app_volume",
+   "params": [
+    {
+     "name": "app",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "level",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "mute_app",
+   "params": [
+    {
+     "name": "app",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "muted",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "get_brightness",
+   "params": [
+    {
+     "name": "monitor",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_brightness",
+   "params": [
+    {
+     "name": "level",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "monitor",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_wallpaper",
+   "params": [
+    {
+     "name": "image_path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "style",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "填充",
+      "适应",
+      "拉伸",
+      "居中",
+      "跨屏"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "set_power_plan",
+   "params": [
+    {
+     "name": "plan",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_power_timeout",
+   "params": [
+    {
+     "name": "kind",
+     "type": "string",
+     "required": true,
+     "enum": [
+      "sleep",
+      "monitor"
+     ]
+    },
+    {
+     "name": "minutes",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "on_battery",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "install_updates",
+   "params": [
+    {
+     "name": "update_filter",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "block_app_network",
+   "params": [
+    {
+     "name": "app",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "direction",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "out",
+      "in",
+      "both"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "allow_app_network",
+   "params": [
+    {
+     "name": "app",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "play_music",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "playlist",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "liked"
+     ]
+    },
+    {
+     "name": "source",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "qq",
+      "netease",
+      "kugou"
+     ]
+    },
+    {
+     "name": "show",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "qqmusic_login",
+   "params": [
+    {
+     "name": "source",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "qq",
+      "netease",
+      "kugou"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "control_music",
+   "params": [
+    {
+     "name": "action",
+     "type": "string",
+     "required": true,
+     "enum": [
+      "play",
+      "pause",
+      "playpause",
+      "next",
+      "previous"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "play_video",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "episode",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "latest",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "source",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "tencent",
+      "bilibili",
+      "iqiyi"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "video_login",
+   "params": [
+    {
+     "name": "source",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "tencent",
+      "bilibili",
+      "iqiyi"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "set_timer",
+   "params": [
+    {
+     "name": "seconds",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "message",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "take_screenshot",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "hwnd",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "system_power",
+   "params": [
+    {
+     "name": "action",
+     "type": "string",
+     "required": true,
+     "enum": [
+      "lock",
+      "sleep",
+      "logoff",
+      "shutdown",
+      "restart"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "list_directory",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "move_to_trash",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "delete_file",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "remember",
+   "params": [
+    {
+     "name": "fact",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "key",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "value",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "forget",
+   "params": [
+    {
+     "name": "keyword",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "recall_screenshot",
+   "params": [
+    {
+     "name": "screenshot_id",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_screenshots",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_windows",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_open_windows",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_desktop_files",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "extensions",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "name_contains",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_desktop_icons",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "click_desktop_icon",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "show_first",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "open_path",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "focus_window",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "close_app",
+   "params": [
+    {
+     "name": "app_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "force",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "close_window",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "close_all_apps",
+   "params": [
+    {
+     "name": "force",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "keep_title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "minimize_window",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_processes",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "find_process",
+   "params": [
+    {
+     "name": "keyword",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "kill_process",
+   "params": [
+    {
+     "name": "name_or_pid",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "force",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "write_clipboard",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_temp_threshold",
+   "params": [
+    {
+     "name": "cpu",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "gpu",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "ssd",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "other",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "alert_enabled",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "interval_sec",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "setup_temp_sensors",
+   "params": [
+    {
+     "name": "download",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_reminder",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "time_expr",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "seconds",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "message",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "description",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "action_func",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "schedule_action",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "time_expr",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "action_func",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "action_args",
+     "type": "object",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "description",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "add_watch_rule",
+   "params": [
+    {
+     "name": "condition_type",
+     "type": "string",
+     "required": true,
+     "enum": [
+      "idle_minutes",
+      "cpu_above",
+      "memory_above",
+      "disk_free_below_gb",
+      "cpu_temp_above",
+      "gpu_temp_above",
+      "temp_above"
+     ]
+    },
+    {
+     "name": "threshold",
+     "type": "number",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "question",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "action_func",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "action_args",
+     "type": "object",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "timeout_sec",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "description",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "delete_watch_rule",
+   "params": [
+    {
+     "name": "rule_id",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "complete_task",
+   "params": [
+    {
+     "name": "task_id",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "delete_task",
+   "params": [
+    {
+     "name": "task_id",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "detect_emotion",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "send_keys",
+   "params": [
+    {
+     "name": "keys",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "copy_path",
+   "params": [
+    {
+     "name": "source",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "destination",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "move_path",
+   "params": [
+    {
+     "name": "source",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "destination",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "rename_path",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "new_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "read_registry",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "write_registry",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "value",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "value_type",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "String",
+      "ExpandString",
+      "DWord",
+      "QWord",
+      "MultiString"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "list_services",
+   "params": [
+    {
+     "name": "status",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "all",
+      "running",
+      "stopped"
+     ]
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "control_service",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "action",
+     "type": "string",
+     "required": true,
+     "enum": [
+      "start",
+      "stop",
+      "restart"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "list_scheduled_tasks",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "run_scheduled_task",
+   "params": [
+    {
+     "name": "task_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "read_env_var",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_env_var",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "value",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_env_vars",
+   "params": [
+    {
+     "name": "prefix",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "list_installed_software",
+   "params": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "install_software",
+   "params": [
+    {
+     "name": "package",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "silent",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uninstall_software",
+   "params": [
+    {
+     "name": "package",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "silent",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_dns",
+   "params": [
+    {
+     "name": "interface_alias",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "primary",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "secondary",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "connect_wifi",
+   "params": [
+    {
+     "name": "ssid",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "password",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_bluetooth",
+   "params": [
+    {
+     "name": "on",
+     "type": "boolean",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "run_shell_admin",
+   "params": [
+    {
+     "name": "command",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "run_shell_system",
+   "params": [
+    {
+     "name": "command",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "install_autostart",
+   "params": [
+    {
+     "name": "scope",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "admin",
+      "system"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "install_system_service",
+   "params": [
+    {
+     "name": "service_name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uninstall_system_service",
+   "params": [
+    {
+     "name": "service_name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "take_ownership",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "recurse",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "grant_full_control",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "account",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "recurse",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "check_system_health",
+   "params": [
+    {
+     "name": "auto_fix",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "clean_disk",
+   "params": [
+    {
+     "name": "items",
+     "type": "array",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "aggressive",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "find_large_files",
+   "params": [
+    {
+     "name": "drive",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "min_mb",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "junk_only",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "kill_memory_hogs",
+   "params": [
+    {
+     "name": "threshold_mb",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "exclude",
+     "type": "array",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "mouse_move",
+   "params": [
+    {
+     "name": "x",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "smooth",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "mouse_click",
+   "params": [
+    {
+     "name": "x",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "virtual",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "mouse_drag",
+   "params": [
+    {
+     "name": "x1",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "y1",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "x2",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "y2",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "duration",
+     "type": "number",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "mouse_scroll",
+   "params": [
+    {
+     "name": "amount",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "x",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "virtual",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uia_find_element",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "automation_id",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "control_type",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "class_name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "scope",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uia_click_element",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "automation_id",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "control_type",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "class_name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uia_get_text",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "automation_id",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "control_type",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uia_list_controls",
+   "params": [
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "scope",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "control_type",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "uia_set_value",
+   "params": [
+    {
+     "name": "value",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "name",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "automation_id",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "control_type",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "ocr_screen",
+   "params": [
+    {
+     "name": "region",
+     "type": "array",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "language",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "ocr_find_text",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "region",
+     "type": "array",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "language",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "partial",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "click_text",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "partial",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "gui_action",
+   "params": [
+    {
+     "name": "target",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "action",
+     "type": "string",
+     "required": false,
+     "enum": [
+      "click",
+      "double_click",
+      "hover"
+     ]
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "partial",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "run_workflow",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "save_workflow",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "trigger_hint",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "steps",
+     "type": "array",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "run_sequence",
+   "params": [
+    {
+     "name": "steps",
+     "type": "array",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "stop_on_error",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "check_occlusion",
+   "params": [
+    {
+     "name": "x",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "hwnd",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "virtual_click",
+   "params": [
+    {
+     "name": "x",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "virtual_scroll",
+   "params": [
+    {
+     "name": "amount",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "x",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "scan_desktop",
+   "params": [
+    {
+     "name": "limit",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "include_controls",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "include_regions",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "screenshot_window",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "hwnd",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "ocr_window",
+   "params": [
+    {
+     "name": "title",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "hwnd",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "language",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "dark_enhance",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wait_until_found",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "control_type",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "timeout",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "partial",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wait_until_gone",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "timeout",
+     "type": "number",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wait_for_stable_screen",
+   "params": [
+    {
+     "name": "timeout",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "stable_for",
+     "type": "number",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "wait_for_file",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "timeout",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "stable_for",
+     "type": "number",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "register_image",
+   "params": [
+    {
+     "name": "name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "find_image",
+   "params": [
+    {
+     "name": "image",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "confidence",
+     "type": "number",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "click_image",
+   "params": [
+    {
+     "name": "image",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "confidence",
+     "type": "number",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "virtual",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "click_and_type",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "target",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "x",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "clear_first",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "virtual",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "focus_and_hotkey",
+   "params": [
+    {
+     "name": "keys",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "target",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "x",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "fill_form",
+   "params": [
+    {
+     "name": "fields",
+     "type": "array",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "submit",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "click_menu_item",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "separator",
+     "type": "string",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "find_text_location",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "partial",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "read_screen_text",
+   "params": [
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "region",
+     "type": "array",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "click_at",
+   "params": [
+    {
+     "name": "x",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "y",
+     "type": "integer",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "button",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "double",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "virtual",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "hover_text",
+   "params": [
+    {
+     "name": "text",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "app",
+     "type": "string",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "partial",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "set_persona",
+   "params": [
+    {
+     "name": "persona",
+     "type": "string",
+     "required": true,
+     "enum": [
+      "humorous",
+      "serious",
+      "playful",
+      "neutral"
+     ]
+    }
+   ]
+  },
+  {
+   "tool": "read_code_file",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "start_line",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    },
+    {
+     "name": "end_line",
+     "type": "integer",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "write_code_file",
+   "params": [
+    {
+     "name": "path",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "content",
+     "type": "string",
+     "required": true,
+     "enum": null
+    },
+    {
+     "name": "create",
+     "type": "boolean",
+     "required": false,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "reload_module",
+   "params": [
+    {
+     "name": "module_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  },
+  {
+   "tool": "find_tool_definition",
+   "params": [
+    {
+     "name": "func_name",
+     "type": "string",
+     "required": true,
+     "enum": null
+    }
+   ]
+  }
+ ]
+}

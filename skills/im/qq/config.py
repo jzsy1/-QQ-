@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 def kekesi_root() -> Path:
     here = Path(__file__).resolve()
     for parent in here.parents:
-        if (parent / "brain.py").is_file() and (parent / "config.yaml").is_file():
+        if (parent / "config.yaml").is_file():
             return parent
     return here.parents[2]
 

@@ -25,8 +25,15 @@ class TestAdminPanel(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.test_port = 18889
+        cfg_file = PROJECT_ROOT / "config.yaml"
+        cls.cfg_backup = cfg_file.read_text(encoding="utf-8") if cfg_file.exists() else None
         cls.server_thread = start_admin_server_background(port=cls.test_port)
         time.sleep(0.5)
+
+    @classmethod
+    def tearDownClass(cls):
+        if getattr(cls, "cfg_backup", None) is not None:
+            (PROJECT_ROOT / "config.yaml").write_text(cls.cfg_backup, encoding="utf-8")
 
     def _get(self, path: str):
         url = f"http://127.0.0.1:{self.test_port}{path}"

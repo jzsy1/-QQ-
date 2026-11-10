@@ -36,19 +36,7 @@ logger = logging.getLogger(__name__)
 
 
 def _active_router():
-    """尝试获取当前主程序 AgentRouter。如果主程序未运行，安全返回 None。"""
-    try:
-        from api.server import get_active_router
-
-        return get_active_router()
-    except Exception:
-        pass
-    try:
-        from kekesi.api.server import get_active_router
-
-        return get_active_router()
-    except Exception:
-        pass
+    """独立 QQ 大脑运行模式：直接使用独立 SimpleBrain。"""
     return None
 
 

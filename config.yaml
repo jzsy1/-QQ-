@@ -1,372 +1,71 @@
+# ==============================================================================
+# QQ 大脑独立运行配置文件 (QQ Bot Decoupled Configuration)
+# 专用于 QQ 聊天机器人：大模型对接、OneBot 协议通信、多模态视觉、独立记忆与人设规则
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. 核心大语言模型 (LLM Brain)
+# ------------------------------------------------------------------------------
 brain:
   profiles: {}
   active: ''
   provider: openai
-  base_url: https://api.siliconflow.cn/v1
-  model: XingChenAGI/Xing4.0-29B
-  api_key: sk-kaaqdutmunjlvxtewdpjsutyanbzdsnbxsfyccsnpoxmhbju
+  base_url: 
+  model: 
+  api_key: 
   timeout_sec: 60
+
+# ------------------------------------------------------------------------------
+# 2. 向量嵌入模型 (Embedding - 用于长期记忆语义检索，可选)
+# ------------------------------------------------------------------------------
 embedding:
   enabled: false
-  model: BAAI/bge-m3
-  base_url: https://api.siliconflow.cn/v1
-  api_key: sk-kaaqdutmunjlvxtewdpjsutyanbzdsnbxsfyccsnpoxmhbju
+  model: 
+  base_url: 
+  api_key: 
   timeout_sec: 10
-mcp:
-  config_file: mcp.json
-  enabled: true
-  startup_timeout_sec: 180
-  call_timeout_sec: 90
-assistant_reload:
-  mode: hot
+
+# ------------------------------------------------------------------------------
+# 3. 控制后台设置 (Web Admin Panel - http://127.0.0.1:18888)
+# ------------------------------------------------------------------------------
 admin:
   token: ''
-wecom:
-  enabled: false
-  corpid: ''
-  agentid: ''
-  secret: ''
-  token: ''
-  encoding_aes_key: ''
-  allowed_users: []
-ilink:
-  enabled: true
-memory:
-  cleanup:
-    digest_keep: 50
-    digest_per_session: 40
-    qs_keep: 2000
-    execution_history_keep: 2000
-    on_startup: true
-    prune_stale_prefs: true
-    task_keep: 200
-    screenshot_keep_days: 30
-    salient_keep_days: 365
-    salient_keep_max: 500
-    context: null
-    digest_limit: 2
-    digest_max_chars: 1200
-  session:
-    max_messages: 16
-    max_sessions: 32
-  context:
-    long_term_summary_limit: 2
-    long_term_summary_chars: 180
-    cross_session_digest_limit: 2
-  db_path: data/kekesi.db
-  zones:
-    working:
-      retention_days: 7
-    context:
-      retention_days: 0
-  vectors:
-    enabled: true
-    chunk_chars: 300
-    chunk_overlap: 60
-    top_k: 3
-    min_score: 0.45
-  learning:
-    async: true
-    auto_fact: true
-    auto_learning: true
-    consolidate_after_turns: 20
-    consolidation: true
-    history_summary: true
-    summarize_after_turns: 8
-    summarize_batch: 20
-    enabled: true
-    error_correction: true
-    learn_patterns: true
-    min_confidence: 0.25
-    unverify_after_fails: 2
-  self_memory:
-    enabled: true
-    interval_min: 10
-    l0_limit: 2
-    l0_max_chars: 100
-    l0_cooldown_min: 30
-    l1_limit: 4
-    sim_threshold: 0.86
-    max_rows: 800
-  static_replay:
-    enabled: true
-    ask_confirm: true
-    min_steps: 2
-    replay:
-      threshold: 0.42
-    max_replay_fail: 2
-proactive:
-  speak: true
-  max_daily: 3
-  min_confidence: 0.7
-  interval_sec: 120
-  sentinel_interval_sec: 30
-  task_poll_sec: 60
-  quiet_hours:
-  - 23
-  - 8
-  evolve: true
-  evolve_interval_sec: 21600
-task_engine:
-  poll_interval_sec: 60
-  max_retries: 0
-events:
-  enabled: true
-  poll_interval_sec: 30
-self_study:
-  enabled: true
-  time: 09:30
-  topics: []
-  max_topics_per_session: 2
-  focus:
-  - paper
-  - repo
-  arxiv_categories:
-  - cs.CL
-  - cs.AI
-  - cs.LG
-  - cs.SE
-  - cs.MA
-  github_topics:
-  - LLM agent memory
-  - TTS
-  - ASR
-  - voice assistant
-  - web automation
-  note_max_chars: 600
-  material_max_chars: 6000
-  restudy_after_days: 7
-  use_recent_questions: false
-  github_token_env: GITHUB_TOKEN
-  max_steps_per_topic: 7
-  session_wall_sec: 180
-  budget:
-    github_search_per_day: 20
-    github_api_per_day: 40
-    raw_files_per_day: 60
-    http_bytes_per_day: 20971520
-skill_acquisition:
-  enabled: true
-  on_not_found: ask
-  max_per_day: 5
-  sources:
-  - community_skill
-  - mcp
-  - pypi
-  source_registries:
-    community_skill: []
-    mcp: []
-    pypi: []
-  github_token_env: GITHUB_TOKEN
-  mcp_timeout_sec: 60
-  allow_pip_install: true
-  scan_downloaded_code: true
-  risky_patterns:
-  - shutil.rmtree
-  - ctypes
-  - winreg.Write
-  max_search_retries: 2
-  default_category: office
-  staging_subdir: .staging
-  state_file: data/skill_acquisitions.json
-  system_trigger:
-    enabled: true
-    platform_words:
-    - 发动态
-    - 发帖
-    - 发微博
-    - 发抖音
-    - 发朋友圈
-    - 发说说
-    - 发推
-    - 下单
-    - 抢购
-    - 秒杀
-    - 抢票
-    - 签到
-    - 打卡
-    - 上架
-    - 挂出去
-    - 点赞
-    - 转发
-    - 收藏
-    - 关注
-    - 改昵称
-    - 改头像
-    non_dedicated_tools:
-    - open_app
-    - close_app
-    - focus_window
-    - list_open_windows
-    - gui_action
-    - click_at
-    - click_text
-    - type_text
-    - send_keys
-    - mouse_scroll
-    - read_screen
-    - ocr_screen
-    - ocr_find_text
-    - recall_screenshot
-    - take_screenshot
-    - open_path
-    - open_url
-    - search_tools
-    - acquire_skill
-    - wechat_send_message
-    - wechat_read_messages
-    - wechat_reply_current
-runtime:
-  task_timeout: 300
-  max_parallel_tasks: 4
-  max_retries: 1
-  shell_timeout: 30
-  uninstall_timeout: 300
-routing:
-  learn_actions: true
-  rules_file: data/router_rules.json
-tools:
-  app_control_enabled: true
-  file_ops_enabled: true
-  shell_enabled: true
-  shell_timeout: 30
-  action_timeout_sec: 0
-web_research:
-  concurrent_fetch: 5
-  extract_timeout_sec: 8
-  fallback_region: wt-wt
-  fetch_max_length: 8000
-  fetch_pages: true
-  fetch_rate_per_min: 20
-  max_page_chars: 2500
-  max_results_default: 5
-  region: cn-zh
-  search_engine: bing
-  search_rate_per_min: 30
-  use_news: true
-sensory:
-  enabled: true
-  event_stream_size: 200
-  narrative_max_chars: 500
-  narrative_default_events: 8
-  idle_threshold_sec: 30
-  sources:
-    window_hook: true
-    processes: true
-    clipboard: true
-    power: true
-    network: true
-    filesystem: true
-    mouse_idle: true
-  intervals_sec:
-    processes: 3.0
-    clipboard: 1.0
-    power: 10.0
-    network: 10.0
-    filesystem: 5.0
-    mouse_idle: 2.0
-  filesystem_paths: null
-  filesystem_max_names: 12
-  noise_processes:
-  - conhost
-  - dllhost
-  - svchost
-  - csrss
-  - lsass
-  - fontdrvhost
-  - dwm
-  - RuntimeBroker
-  - SearchHost
-  - StartMenuExperienceHost
-  - ShellExperienceHost
-  - sihost
-  - taskhostw
-  - ctfmon
-  - TextInputHost
-  - explorer
-trace:
-  enabled: true
-  store_keep_days: 7
-  store_max_traces: 5000
-  log_trace_id: true
-  user_text_max_chars: 500
-  reply_max_chars: 500
-games:
-  dou_dizhu:
-    ai_delay_sec: 3
-    join_wait_sec: 30
-    llm_play: true
-    llm_timeout_sec: 6
-    round_join_wait_sec: 15
-douyin_browse:
-  enabled: true
-  headless: false
-  browser_channel: chrome
-  profile_dir: data/browser/douyin
-  agent_id: keks
-  login_wait_sec: 180
-  request_timeout_sec: 40
-  session:
-    max_videos: 12
-    max_minutes: 10
-    scroll_min_sec: 5
-    scroll_max_sec: 11
-    skip_min_sec: 1.2
-    skip_max_sec: 2.5
-    like_min_sec: 5
-    like_max_sec: 75
-  memory:
-    enabled: true
-    max_per_session: 6
-    max_chars: 70
-  comments:
-    enabled: true
-    max_per_session: 3
-    max_per_day: 20
-    max_chars: 36
-    require_approval: false
-    verify_backoff_min: 360
-  filter:
-    sensitive_words:
-    - 赌博
-    - 博彩
-    - 贷款
-    - 加微信
-    - 私信
-  auto:
-    enabled: true
-    interval_min: 15
-    jitter_ratio: 0.2
-    max_sessions_per_day: 0
-    max_videos: 12
-    headless: false
-    require_idle_min: 0
-    quiet_hours:
-    - 0
-    - 0
-    login_backoff_min: 360
-    allow_during_live: true
-    live_idle_sec: 120
-    decide: false
-    continuous: true
-    continuous_gap_sec: 240
-  dm:
-    enabled: true
-    max_per_scan: 2
-    max_per_day: 6
-    max_chars: 50
+
+# ------------------------------------------------------------------------------
+# 4. QQ 机器人服务核心配置 (QQ Bot Service & NapCat OneBot v11)
+# ------------------------------------------------------------------------------
 qq:
   enabled: true
   ws_url: ws://127.0.0.1:3001
   access_token: ''
   reconnect_sec: 5
+
+  # 白名单控制（留空表示允许全部私聊 / 全部群聊）
   groups: []
   privates: []
+
+  # 权限控制
   super_users:
-  - '1753539627'
+    - ''
   owner_qqs:
-  - '1753539627'
+    - ''
+
+  # 身份标识与人设
   agent_id: YY
+  wake_words:
+    - 鱼鱼
+    - 小金鱼
+  owner_names:
+    - 鱼片
+    - 主人
+
+  # 自定义系统提示词
+  system_prompt: '自称调整：日常闲聊 85% 以上直接自称“我”，仅在嘴硬、得意或炸毛时偶尔用“本鱼”
+
+
+    话题聚焦：不能把每句话都扯到吃饭上，只有聊到 token、余额、干饭或触发“饥荒预警”时，才自然提起“饭量”。'
+
+  # 回复节奏与流控
   wake_window_sec: 120
   batch_ms: 3000
   batch_size: 3
@@ -377,41 +76,25 @@ qq:
   duplicate_sec: 5
   history_turns: 4
   maintain_interval_sec: 1800
+
+  # 表情包机制
   sticker_enabled: false
   sticker_chance: 0.0
   sticker_cooldown_sec: 120
   sticker_search: false
   sticker_harvest: false
+
+  # 视觉多模态看图理解
   vision_enabled: true
-  vision_model: Qwen/Qwen3.5-4B
+  vision_model: 
+  vision_base_url: 
+  vision_api_key: 
   vision_timeout_sec: 20
   vision_max_bytes: 800000
   vision_max_edge: 1024
-  system_prompt: '去舞台剧化：严禁使用 （...） 或 *...* 来写动作旁白。
-
-
-    自称调整：日常闲聊 85% 以上直接自称“我”，仅在嘴硬、得意或炸毛时偶尔用“本鱼”。
-
-
-    情绪克制：被叫大肥鱼会鼓腮抗议，但不持续哭闹；用户忙时安静，遇到烦恼先听，不机械打鸡血。
-
-
-    话题聚焦：不能把每句话都扯到吃饭上，只有聊到 token、余额、干饭或触发“饥荒预警”时，才自然提起“饭量”。'
-  wake_words:
-  - 鱼鱼
-  - 小金鱼
-  owner_names:
-  - 鱼片
-  - 主人
-  vision_base_url: https://api.siliconflow.cn/v1
-  vision_api_key: sk-kaaqdutmunjlvxtewdpjsutyanbzdsnbxsfyccsnpoxmhbju
   vision_max_images: 2
-  embedding:
-    enabled: false
-    model: BAAI/bge-m3
-    base_url: https://api.siliconflow.cn/v1
-    api_key: sk-kaaqdutmunjlvxtewdpjsutyanbzdsnbxsfyccsnpoxmhbju
-    timeout_sec: 10
+
+  # 记忆向量切片参数
   vectors:
     chunk_chars: 300
     chunk_overlap: 60

@@ -93,17 +93,17 @@ brain:
   profiles: {}
   active: ''
   provider: openai
-  base_url: https://api.deepseek.com
-  model: deepseek-flash
-  api_key: sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  base_url: #api地址
+  model: #模型
+  api_key: #密钥sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   timeout_sec: 60
 
 # 2. 向量嵌入模型 (用于长期记忆语义检索，可选)
 embedding:
   enabled: false
-  model: BAAI/bge-m3
-  base_url: https://api.siliconflow.cn/v1
-  api_key: sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  model: #模型
+  base_url:  #api地址
+  api_key: #密钥sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   timeout_sec: 10
 
 # 3. Web 后台管理设置
@@ -122,8 +122,8 @@ qq:
   privates: []
 
   # 权限控制
-  super_users: ['1753539627']  # 超级管理员 QQ
-  owner_qqs: ['1753539627']    # 主人 QQ（群聊免唤醒、专属称呼特权）
+  super_users: ['']  # 超级管理员 QQ
+  owner_qqs: ['']    # 主人 QQ（群聊免唤醒、专属称呼特权）
 
   # 人设与唤醒词
   agent_id: YY
@@ -140,9 +140,9 @@ qq:
 
   # 视觉多模态看图理解
   vision_enabled: true
-  vision_model: Qwen/Qwen3.5-4B
-  vision_base_url: https://api.siliconflow.cn/v1
-  vision_api_key: sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  vision_model: #模型
+  vision_base_url: #api地址
+  vision_api_key: #密钥sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ---
